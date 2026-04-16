@@ -24,4 +24,20 @@ public class JatekGep {
         System.out.println("Érvénytelen tét: " + tet + " [min: " + minimumTet + " – " + maximumTet + " : 100.0])");
         return false;
     }
+
+    public double jatszik(double tet) {
+        return 0.0;
+    }
+
+    public double getProfit() {
+        return osszesBevet - osszesKifizetes;
+    }
+
+    public String getAdatlap() {
+        return "["+ azonosito + "] " + nev + " | Tét: " + minimumTet + " – " + maximumTet + " Ft | Körök: " + jatszottKorok;
+    }
+
+    public String getStatisztika() {
+        return "Bevétel: " + osszesBevet + " Ft | Kifizetés: " + osszesKifizetes + " Ft | Profit: " + getProfit() + " Ft";
+    }
 }
