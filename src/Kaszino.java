@@ -7,5 +7,11 @@ public class Kaszino {
         this.darabszam = 0;
     }
 
-
+    public void gepFelvet(JatekGep g) {
+        if (!(darabszam < gepek.length)) {
+            throw new IllegalStateException("A kaszinó megtelt, nem vehető fel több gép")
+        }
+        gepek[darabszam] = g;
+        darabszam++;
+    }
 }
